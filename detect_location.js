@@ -15,8 +15,8 @@ function ipLookUp () {
 }
 
 function getAddress (latitude, longitude) {
-  $.ajax('https://maps.googleapis.com/maps/api/geocode/json?
-          latlng=' + latitude + ',' + longitude + '&key=' + 
+  $.ajax('https://maps.googleapis.com/maps/api/geocode/json?' +
+          'latlng=' + latitude + ',' + longitude + '&key=' + 
           GOOGLE_MAP_KEY)
   .then(
     function success (response) {
@@ -41,8 +41,8 @@ if ("geolocation" in navigator) {
    },
   function error(error_message) {
     // for when getting location results in an error
-    console.error('An error has occured while retrieving
-                  location', error_message)
+    console.error('An error has occured while retrieving' +
+                  'location', error_message)
     ipLookUp()
   }
 });
