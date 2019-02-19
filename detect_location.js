@@ -4,7 +4,7 @@ function ipLookUp () {
       function success(response) {
           console.log('User\'s Location Data is ', response);
           console.log('User\'s Country', response.country);
-          getAdress(response.lat, response.lon)
+          getAddress(response.lat, response.lon)
 },
 
       function fail(data, status) {
